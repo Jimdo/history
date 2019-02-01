@@ -233,16 +233,6 @@
       if (state !== undefined && location.state === undefined) location.state = state;
     }
 
-    try {
-      location.pathname = decodeURI(location.pathname);
-    } catch (e) {
-      if (e instanceof URIError) {
-        throw new URIError('Pathname "' + location.pathname + '" could not be decoded. ' + 'This is likely caused by an invalid percent-encoding.');
-      } else {
-        throw e;
-      }
-    }
-
     if (key) location.key = key;
 
     if (currentLocation) {
