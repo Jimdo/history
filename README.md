@@ -1,3 +1,14 @@
+# JIMDO FORK NOTICE
+
+This repo was forked from https://github.com/ReactTraining/history since cms-frontend uses react-router, which in turn 
+utilizes `history` internally. 
+
+The issue we were running into is that the `history`-library automatically decodes path. Given that we want to support
+e.g. Japanese characters in the path, this was causing issues were we had to double-encode japanese characters to make
+sure they were decoded properly in React-Router.
+
+If this PR gets merged, switch back to the original repo: https://github.com/ReactTraining/history/pull/656
+
 # history [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
 
 [build-badge]: https://img.shields.io/travis/ReactTraining/history/master.svg?style=flat-square
