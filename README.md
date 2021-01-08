@@ -1,13 +1,21 @@
 # JIMDO FORK NOTICE
 
-This repo was forked from https://github.com/ReactTraining/history since cms-frontend uses react-router, which in turn 
-utilizes `history` internally. 
+This repo was forked from https://github.com/ReactTraining/history since cms-frontend uses react-router, which in turn
+utilizes `history` internally.
 
 The issue we were running into is that the `history`-library automatically decodes path. Given that we want to support
 e.g. Japanese characters in the path, this was causing issues were we had to double-encode japanese characters to make
 sure they were decoded properly in React-Router.
 
-If this PR gets merged, switch back to the original repo: https://github.com/ReactTraining/history/pull/656
+#### Publishing Changes To Fork
+
+The package is published to the private Jimdo npm registry.
+
+Instructions for publishing:
+1. Acquire an npm token which allows for publishing to internal registry
+2. Verify changes by running `NPM_TOKEN=INSERT_TOKEN_HERE npm publish --dry-run`
+   where you utilize the token from step 1 to replace "INSERT_TOKEN_HERE".
+3. Run `NPM_TOKEN=INSERT_TOKEN_HERE npm publish`
 
 # history [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
 
