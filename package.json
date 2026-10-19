@@ -25,7 +25,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider rollup -c",
     "clean": "git clean -fdX .",
     "lint": "eslint modules",
     "prepublishOnly": "npm run build",
@@ -78,5 +78,13 @@
   "keywords": [
     "history",
     "location"
-  ]
+  ],
+  "volta": {
+    "node": "24.21.0",
+    "npm": "12.1.0"
+  },
+  "allowScripts": {
+    "fsevents": false,
+    "uglifyjs-webpack-plugin": false
+  }
 }
