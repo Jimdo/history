@@ -25,7 +25,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider rollup -c",
     "clean": "git clean -fdX .",
     "lint": "eslint modules",
     "prepublishOnly": "npm run build",
