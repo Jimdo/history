@@ -7,6 +7,18 @@ The issue we were running into is that the `history`-library automatically decod
 e.g. Japanese characters in the path, this was causing issues were we had to double-encode japanese characters to make
 sure they were decoded properly in React-Router.
 
+#### Development
+
+Use the Node and npm versions pinned in the `volta` field of `package.json` (npm 12).
+
+```sh
+npm ci
+npm run lint
+npm test            # Jest + jsdom against the sources in modules/
+npm run test:build  # builds cjs/esm/umd, then runs the tests against the cjs and umd bundles
+npm run build
+```
+
 #### Publishing Changes To Fork
 
 The package is published to the private Jimdo npm registry.
