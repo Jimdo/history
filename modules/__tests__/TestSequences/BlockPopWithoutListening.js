@@ -1,5 +1,3 @@
-import expect from 'expect';
-
 export default function(history, done) {
   expect(history.location).toMatchObject({
     pathname: '/'

@@ -1,5 +1,3 @@
-import expect from 'expect';
-
 import { createBrowserHistory as createHistory } from 'history';
 
 import * as TestSequences from './TestSequences';
